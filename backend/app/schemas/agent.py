@@ -27,3 +27,50 @@ class AgentTaskResponse(BaseModel):
     sources_consulted: List[Dict[str, str]] = []
     traces: List[StepTrace] = []
 
+
+class CheckpointItem(BaseModel):
+    id: str
+    agent: str
+    title: str
+    description: str
+    riskLevel: Literal["low", "medium", "high"]
+    actionPayload: str
+    status: Literal["pending", "approved", "rejected"]
+    timestamp: str
+
+
+class ToolRegistryItem(BaseModel):
+    id: str
+    name: str
+    description: str
+    category: str
+    status: str
+    calls_today: int
+    avg_latency_ms: int
+
+
+class MissionItem(BaseModel):
+    id: str
+    name: str
+    objective_type: str
+    status: str
+    progress: int
+    duration: str
+    agents: List[str]
+    created_at: str
+
+
+class ThroughputData(BaseModel):
+    labels: List[str]
+    values: List[int]
+    total_week: int
+    avg_per_day: float
+
+
+class TemplateItem(BaseModel):
+    id: str
+    name: str
+    steps: int
+    est_minutes: int
+    description: str
+
