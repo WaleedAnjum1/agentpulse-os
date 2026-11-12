@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -5,7 +6,7 @@
   --foreground: #f1f5f9;
   --surface: #0f172a;
   --surface-low: #0b1120;
-  --surface-card: #111827;
+  --surface-card: #0d1424;
   --surface-border: #1e293b;
   --primary: #4f46e5;
   --primary-hover: #4338ca;
@@ -13,30 +14,62 @@
   --tertiary: #8b5cf6;
   --accent-teal: #0d9488;
   --accent-rose: #e11d48;
+  --agent-planner: #7c3aed;
+  --agent-researcher: #0284c7;
+  --agent-analyzer: #0d9488;
+  --agent-writer: #d97706;
+  --agent-factchecker: #e11d48;
+  --status-complete: #10b981;
+  --status-pending: #f59e0b;
+  --status-error: #ef4444;
+  --status-running: #0ea5e9;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-/* Custom scrollbars for data streams */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* Custom scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.4); }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* JetBrains Mono for all mono elements */
+.font-mono, code, pre, kbd {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.6);
+/* Smooth tab transitions */
+.tab-enter {
+  animation: tabFadeIn 0.18s ease-out forwards;
+}
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 9999px;
+/* Progress bar animation */
+@keyframes progressPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.progress-running { animation: progressPulse 2s ease-in-out infinite; }
+
+/* Spinning loader */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 1s linear infinite; }
+
+/* Soft glow on primary buttons */
+.btn-primary-glow:hover {
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.35);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
+/* SVG chart bars */
+.chart-bar { transition: opacity 0.15s ease; }
+.chart-bar:hover { opacity: 0.85; }
