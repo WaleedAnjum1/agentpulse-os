@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline":"#777587","surface-variant":"#d3e4fe","on-secondary-container":"#006f66","on-error":"#ffffff","tertiary-fixed-dim":"#d2bbff","inverse-on-surface":"#eaf1ff","on-tertiary-fixed-variant":"#5a00c6","tertiary":"#5c00ca","primary-fixed-dim":"#c3c0ff","surface-container-high":"#dce9ff","error-container":"#ffdad6","surface-dim":"#cbdbf5","on-error-container":"#93000a","secondary-fixed-dim":"#6bd8cb","surface-tint":"#4d44e3","on-surface":"#0b1c30","primary":"#3525cd","error":"#ba1a1a","on-secondary-fixed-variant":"#005049","on-primary-fixed-variant":"#3323cc","on-tertiary-fixed":"#25005a","on-background":"#0b1c30","background":"#f8f9ff","on-primary-container":"#dad7ff","on-secondary-fixed":"#00201d","inverse-primary":"#c3c0ff","outline-variant":"#c7c4d8","surface-container-highest":"#d3e4fe","tertiary-fixed":"#eaddff","surface-bright":"#f8f9ff","on-tertiary":"#ffffff","primary-container":"#4f46e5","surface-container-lowest":"#ffffff","on-primary":"#ffffff","surface-container":"#e5eeff","inverse-surface":"#213145","on-tertiary-container":"#e4d4ff","secondary":"#006a61","on-primary-fixed":"#0f0069","primary-fixed":"#e2dfff","tertiary-container":"#7531e6","surface":"#f8f9ff","secondary-container":"#86f2e4","secondary-fixed":"#89f5e7","surface-container-low":"#eff4ff","on-secondary":"#ffffff","on-surface-variant":"#464555"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","margin-lg":"2rem","margin-md":"1.5rem","space-xl":"2rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1.25rem","gutter-lg":"1.5rem","gutter":"1rem","space-xs":"0.25rem"},"fontFamily":{"label-md":["JetBrains Mono"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"code-body":["JetBrains Mono"],"body-lg":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"label-sm":["JetBrains Mono"]},"fontSize":{"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-body":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="BusinessAgent OS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAsb5u7S1BygrTZQuJWoNeYXvUnOMG4hWK0fG0RJiOUiOboLvi7GoBlgvZrBhCvB2Wss7RF1PR5JqU2M8YiMSWXB98BjfP3LxDi8MITtqIUGqd_uaGKWZFlpSOVcY6n7JjpNoPxCXf0phVWI7zCMT1mUiQvQz3huh3BfQ5e4PoARiWubSYKkYAIAC7qMACNuOaubi7QfkcFt6AP8hwAtlJLTXJ_BG5FH2v3H51Vz2w"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">BusinessAgent</span></div><button class="flex items-center justify-between w-full p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container hover:text-on-surface transition-colors"><div class="flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate max-w-[170px]">Acme Strategy Group</span><span class="font-label-sm text-label-sm text-on-surface-variant">Enterprise Edition</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></button></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="missions" href="#"><span class="material-symbols-outlined text-[20px]">flag</span>Missions</a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-medium" data-path="live-run-trace" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span>Live Run / Trace</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="approvals" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">verified_user</span>Approvals</div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">3</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">article</span>Reports</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="agents" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span>Agents</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="tool-registry" href="#"><span class="material-symbols-outlined text-[20px]">extension</span>Tool Registry</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="templates" href="#"><span class="material-symbols-outlined text-[20px]">dashboard_customize</span>Templates</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span>5 Online</span><span class="font-label-sm text-label-sm font-semibold text-primary">2 Executing</span></div><div class="flex flex-col gap-1 mt-space-xs"><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Credits</span><span>18,420 / 25k</span></div><div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 73.6%"></div></div></div></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">help</span>Help &amp; Documentation</a></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-md text-outline text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-space-xs rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Search missions, agents, traces... ⌘K" type="text"/><span class="absolute right-space-sm font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Acme Prod (US-East)</span></div><button class="relative p-space-xs rounded-lg hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-sm text-body-sm transition-all shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span>New Mission</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKinkNKA4roAt1RQAU1rXSkbc8-fyA9j7JEEmAAMxln8E6XuosI3uLv7cdB_9QH3OZymKtBnaghabF0k3KtR-NlDX595HhLoyN_TydXpWeQOXWflbe2Tg_CwyEdXYQzBD9OQYSHg-9ujAUEOT4cByYCekvCI3_34O16IVI_L_0EgD7oCzHVLEq9bp7mZ9lGdd45faJS0nn2lDU8CEKd0Ez4L-UFpjmmwzLQwJ9ZU"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Elena Rostova</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Principal Strategist</span></div></div></div></header><main class="w-full pt-16 bg-surface px-gutter-lg py-margin-md"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Command & Mission Monitor Bar -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+          RUNNING • STEP 4 OF 6 (WRITING)
+        </span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-low">RUN-ID: #CI-8841-DD-DT</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container/40 px-2 py-0.5 rounded-full font-medium">Auto-Healing Enabled</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight truncate mt-1">
+        Competitive Intelligence: Datadog vs Dynatrace AI Observability Teardown
+      </h1>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+          Started <span class="font-label-sm text-label-sm font-semibold text-on-surface ml-0.5">4m 18s ago</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">person</span>
+          Initiated by <span class="font-semibold text-on-surface ml-0.5">Elena Rostova</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">biotech</span>
+          Strategy: <span class="font-semibold text-primary ml-0.5">Deep Research + Financial Normalization</span>
+</span>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center gap-space-xs self-start xl:self-center shrink-0">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm" id="btn-pause" onclick="togglePause()">
+<span class="material-symbols-outlined text-[18px]">pause</span>
+<span id="btn-pause-text">Pause</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-error-container hover:text-on-error-container text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">stop</span>
+<span>Stop</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Rerun</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md transition-all shadow-sm" onclick="copyShareLink()">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Share Live Link</span>
+</button>
+</div>
+</section>
+<!-- High-Density Three-Pane Workspace -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANE: Pipeline Timeline (Col 1-3 -> ~25% responsive) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-md bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">reorder</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pipeline Stepper</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">6 Nodes</span>
+</div>
+<!-- Stepper List -->
+<div class="relative flex flex-col gap-space-md before:absolute before:left-[19px] before:top-4 before:bottom-6 before:w-0.5 before:bg-surface-container-highest">
+<!-- Step 1: Completed -->
+<div class="relative flex items-start gap-space-md group cursor-pointer">
+<div class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-on-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col flex-1 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-tertiary">Planner Agent</span>
+<span class="font-label-sm text-label-sm text-outline">18s</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Objective Decomposition</span>
+<div class="flex items-center gap-2 mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Cost: $0.014</span>
+<span>•</span>
+<span>1.2k tokens</span>
+</div>
+</div>
+</div>
+<!-- Step 2: Completed -->
+<div class="relative flex items-start gap-space-md group cursor-pointer">
+<div class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-on-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col flex-1 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-primary">Researcher Agent</span>
+<span class="font-label-sm text-label-sm text-outline">1m 42s</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Web Scraping &amp; SEC Filings</span>
+<div class="flex items-center gap-2 mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-semibold text-on-surface">38 sources</span>
+<span>•</span>
+<span>16.4k tokens</span>
+</div>
+</div>
+</div>
+<!-- Step 3: Completed -->
+<div class="relative flex items-start gap-space-md group cursor-pointer">
+<div class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-on-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col flex-1 p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-secondary">Data Analyzer</span>
+<span class="font-label-sm text-label-sm text-outline">54s</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Quantitative Pricing Extraction</span>
+<div class="flex items-center gap-2 mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>3 matrices</span>
+<span>•</span>
+<span>$0.062</span>
+</div>
+</div>
+</div>
+<!-- Step 4: Active / In Progress -->
+<div class="relative flex items-start gap-space-md group cursor-pointer">
+<div class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary ring-4 ring-primary-container/20 shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+</div>
+<div class="flex flex-col flex-1 p-space-sm rounded-lg bg-primary-container/10 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-primary">Report Writer</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                ACTIVE
+              </span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Executive Synthesis Drafting</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 italic">
+              "Drafting Section 3: Feature Matrix &amp; Platform Moats..."
+            </p>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+<!-- Step 5: Queued -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<div class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-surface-container text-outline shrink-0">
+<span class="font-label-sm text-label-sm font-bold">5</span>
+</div>
+<div class="flex flex-col flex-1 p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium uppercase text-outline">Fact-Checker</span>
+<span class="font-label-sm text-label-sm text-outline">Queued</span>
+</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface mt-0.5">Citation &amp; Claim Auditing</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Pending writer section freeze</span>
+</div>
+</div>
+<!-- Step 6: Queued -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<div class="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-surface-container text-outline shrink-0">
+<span class="font-label-sm text-label-sm font-bold">6</span>
+</div>
+<div class="flex flex-col flex-1 p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-medium uppercase text-outline">Deliverable Engine</span>
+<span class="font-label-sm text-label-sm text-outline">Queued</span>
+</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface mt-0.5">Final Executive Brief (PDF/Notion)</span>
+</div>
+</div>
+</div>
+<!-- Bottom Mini-Stats within Stepper -->
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Estimated Completion</span>
+<span class="font-semibold text-on-surface">~1m 45s</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Safety Interventions</span>
+<span class="font-semibold text-secondary">0 flags</span>
+</div>
+</div>
+</aside>
+<!-- CENTER PANE: Live Execution Trace Feed (Col 4-9 -> ~50% responsive) -->
+<main class="xl:col-span-6 flex flex-col gap-space-md bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Execution Trace Stream</h2>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">
+            Streaming Realtime
+          </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container" title="Filter logs">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container" title="Auto-scroll pinned">
+<span class="material-symbols-outlined text-[18px] text-primary">vertical_align_bottom</span>
+</button>
+</div>
+</div>
+<!-- Trace Activity Feed Items -->
+<div class="flex flex-col gap-space-md overflow-y-auto max-h-[920px] pr-1" id="trace-container">
+<!-- Feed Item 1: Planner Agent Thinking -->
+<article class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+                PLANNER AGENT
+              </span>
+<span class="font-label-sm text-label-sm text-outline font-code-body">&lt;Thinking&gt;</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">00:14.280</span>
+</div>
+<div class="mt-1 font-body-sm text-body-sm text-on-surface leading-relaxed pl-2 bg-surface-container/60 rounded py-1">
+            "Objective requires breaking down into 3 parallel streams: product architecture, enterprise pricing benchmarks, and customer sentiment signals. Sub-routing Tavily crawler to 10-K disclosures and FY24 earnings calls."
+          </div>
+</article>
+<!-- Feed Item 2: Tavily Search Call -->
+<article class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+                RESEARCHER AGENT
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-code-body">&lt;Tool Call: Tavily Search&gt;</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">00:42.105</span>
+</div>
+<div class="mt-1 flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase">Query:</span>
+<code class="font-code-body text-code-body text-primary bg-surface-container px-2 py-0.5 rounded flex-1">
+                datadog vs dynatrace ai observability features llm monitoring 2024
+              </code>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase">Result:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Extracted 12 relevant URLs, 4 whitepapers, and 2 Gartner/IDC analyst notes. Top signal: Dynatrace Davis AI engine vs Datadog Bits AI.</span>
+</div>
+</div>
+</article>
+<!-- Feed Item 3: Firecrawl Scraper -->
+<article class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+                RESEARCHER AGENT
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-code-body">&lt;Tool Call: Firecrawl Scraper&gt;</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">01:18.892</span>
+</div>
+<div class="mt-1 flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase">Target:</span>
+<a class="font-code-body text-code-body text-primary underline truncate" href="#">https://www.datadog.com/pricing/llm-observability</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Extracted pricing schema: <span class="font-semibold text-on-surface">$0.10 per 100k monitored tokens</span>, base agent telemetry at $5/host add-on. Scrape fidelity: 99.8%.
+            </p>
+</div>
+</article>
+<!-- Feed Item 4: Python Code Execution with Rendered Data Table -->
+<article class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+                DATA ANALYZER
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-code-body">&lt;Python Code Execution: Cost Model&gt;</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">02:05.419</span>
+</div>
+<!-- Code Snippet -->
+<div class="p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface font-code-body text-code-body overflow-x-auto shadow-inner">
+<span class="text-tertiary-fixed-dim">import</span> pandas <span class="text-tertiary-fixed-dim">as</span> pd<br/>
+            df = pd.DataFrame({<br/>
+              <span class="text-secondary-fixed">"Vendor"</span>: [<span class="text-secondary-fixed">"Datadog LLM Obs"</span>, <span class="text-secondary-fixed">"Dynatrace Grail"</span>],<br/>
+              <span class="text-secondary-fixed">"50M_Tokens_Est"</span>: [<span class="text-primary-fixed-dim">"$50.00"</span>, <span class="text-primary-fixed-dim">"$48.50"</span>],<br/>
+              <span class="text-secondary-fixed">"Host_Overhead"</span>: [<span class="text-primary-fixed-dim">"$15.00/host"</span>, <span class="text-primary-fixed-dim">"$0.00 (DPS Unit)"</span>]<br/>
+            })
+          </div>
+<!-- Rendered Mini Table -->
+<div class="mt-2 overflow-x-auto rounded-lg bg-surface-container-lowest p-space-sm shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase block mb-1.5">
+              Live Preview: 50M Monthly Tokens Benchmark
+            </span>
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<tr>
+<th class="p-2 rounded-l">Metric</th>
+<th class="p-2">Datadog</th>
+<th class="p-2">Dynatrace</th>
+<th class="p-2 rounded-r">Delta</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr>
+<td class="p-2 font-medium">50M Token Monitoring</td>
+<td class="p-2 text-primary font-label-md text-label-md">$50.00</td>
+<td class="p-2 text-secondary font-label-md text-label-md">$48.50</td>
+<td class="p-2 text-secondary font-semibold font-label-md text-label-md">-3.0%</td>
+</tr>
+<tr>
+<td class="p-2 font-medium">Platform Minimums</td>
+<td class="p-2 font-label-md text-label-md">$15.00 / host</td>
+<td class="p-2 font-label-md text-label-md">DPS Consumption Pool</td>
+<td class="p-2 text-on-surface-variant text-label-sm">Diff Architecture</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<!-- Feed Item 5: Fact Checker Anomaly Alert -->
+<article class="flex flex-col gap-space-xs p-space-md rounded-xl bg-error-container/30 transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold">
+                FACT-CHECKER
+              </span>
+<span class="font-label-sm text-label-sm text-error font-code-body">&lt;Self-Reflection / Anomaly Alert&gt;</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-medium">03:10.012</span>
+</div>
+<div class="mt-1 flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">report_problem</span>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm font-semibold text-error">Conflict Detected in G2 Peer Reviews vs SEC 10-K Data</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                A review claims Dynatrace pricing is 30% higher for mid-market, yet official pricing API shows parity at Tier 2 enterprise tiers. Dispatching validation probe to Gartner Peer Insights repository...
+              </p>
+</div>
+</div>
+</article>
+<!-- Feed Item 6: Report Writer Streaming Text -->
+<article class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-primary font-label-sm text-label-sm font-bold">
+                REPORT WRITER
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-code-body">&lt;Streaming Text Output: Draft&gt;</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">04:02.774</span>
+</div>
+<div class="mt-1 p-space-md rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-sm leading-relaxed">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">
+              ### Section 3: AI Observability Differentiation
+            </div>
+<p class="text-on-surface" id="streaming-text">
+              Datadog's recent LLM Observability suite offers out-of-the-box LangChain and OpenAI integrations with zero telemetry refactoring. In contrast, Dynatrace leverages Grail's causal AI reasoning engine to correlate token latencies directly with underlying Kubernetes cluster health...
+            </p>
+<span class="inline-block w-2 h-4 bg-primary align-middle ml-1 animate-pulse"></span>
+</div>
+</article>
+</div>
+</main>
+<!-- RIGHT PANE: Context & Graph Panel (Col 10-12 -> ~25% responsive) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Interactive Sub-Tab Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center justify-between">
+<button class="flex-1 py-1.5 px-2 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary text-center" id="tab-graph" onclick="switchRightTab('graph')">
+          DAG Graph
+        </button>
+<button class="flex-1 py-1.5 px-2 rounded-lg font-label-sm text-label-sm font-medium transition-all text-on-surface-variant hover:text-on-surface text-center" id="tab-metrics" onclick="switchRightTab('metrics')">
+          Metrics
+        </button>
+<button class="flex-1 py-1.5 px-2 rounded-lg font-label-sm text-label-sm font-medium transition-all text-on-surface-variant hover:text-on-surface text-center" id="tab-sources" onclick="switchRightTab('sources')">
+          Sources (38)
+        </button>
+</div>
+<!-- Tab Content 1: DAG Task Graph -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="content-graph">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Execution Graph</h3>
+<span class="font-label-sm text-label-sm text-outline">DAG 2.4</span>
+</div>
+<!-- Inline SVG Interactive DAG Graph Diagram -->
+<div class="relative w-full h-72 rounded-lg bg-surface-container-low flex items-center justify-center p-2 overflow-hidden">
+<svg class="w-full h-full" fill="none" viewbox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+<!-- Connecting Edges with subtle dash animation -->
+<path d="M160 48 V85" stroke="#777587" stroke-dasharray="4 2" stroke-width="2"></path>
+<path d="M160 115 V145" stroke="#006a61" stroke-width="2"></path>
+<path d="M160 175 V205" stroke="#3525cd" stroke-dasharray="3 3" stroke-width="2"></path>
+<path d="M160 235 V260" stroke="#c7c4d8" stroke-dasharray="2 2" stroke-width="2"></path>
+<!-- Node 0: Root Goal -->
+<g transform="translate(70, 15)">
+<rect class="filter drop-shadow-sm" fill="#ffffff" height="34" rx="8" width="180"></rect>
+<circle cx="16" cy="17" fill="#5c00ca" r="5"></circle>
+<text fill="#0b1c30" font-family="Inter" font-size="11" font-weight="600" x="32" y="22">Goal: Teardown Matrix</text>
+</g>
+<!-- Node 1: Web Crawl & Ingestion -->
+<g transform="translate(60, 85)">
+<rect class="filter drop-shadow-sm" fill="#ffffff" height="34" rx="8" width="200"></rect>
+<circle cx="16" cy="17" fill="#006a61" r="5"></circle>
+<text fill="#0b1c30" font-family="Inter" font-size="11" font-weight="600" x="32" y="22">Tavily Scraper [Done]</text>
+<text fill="#777587" font-family="JetBrains Mono" font-size="9" x="160" y="22">38 src</text>
+</g>
+<!-- Node 2: Cost Normalization -->
+<g transform="translate(50, 145)">
+<rect class="filter drop-shadow-sm" fill="#ffffff" height="34" rx="8" width="220"></rect>
+<circle cx="16" cy="17" fill="#006a61" r="5"></circle>
+<text fill="#0b1c30" font-family="Inter" font-size="11" font-weight="600" x="32" y="22">Pricing Normalizer [Done]</text>
+<text fill="#006a61" font-family="JetBrains Mono" font-size="9" x="180" y="22">100%</text>
+</g>
+<!-- Node 3: Synthesis (Active) -->
+<g transform="translate(45, 205)">
+<rect class="filter drop-shadow-md" fill="#4f46e5" height="36" rx="8" width="230"></rect>
+<circle cx="18" cy="18" fill="#ffffff" r="6"></circle>
+<text fill="#ffffff" font-family="Inter" font-size="11" font-weight="700" x="36" y="23">Synthesis Drafting [Active]</text>
+<circle cx="210" cy="18" fill="#86f2e4" r="3"></circle>
+</g>
+<!-- Node 4: Audit & Release -->
+<g transform="translate(65, 260)">
+<rect fill="#eff4ff" height="30" rx="8" width="190"></rect>
+<text fill="#777587" font-family="Inter" font-size="10" font-weight="500" x="40" y="20">Fact Audit &amp; PDF</text>
+</g>
+</svg>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Active Threads: <strong class="text-on-surface">3 Parallel</strong></span>
+<span class="text-primary font-medium">Memory Cache: 142MB</span>
+</div>
+</div>
+<!-- Tab Content 2: Live Metrics (Shown inside combined stack for high data density) -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="content-metrics">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Telemetry &amp; Cost</h3>
+<span class="material-symbols-outlined text-outline text-[18px]">query_stats</span>
+</div>
+<!-- Metric Cards 2x2 Bento -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Total Tokens</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">42,850</span>
+<span class="font-label-sm text-label-sm text-primary mt-0.5">31.2k in / 11.6k out</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Real-Time Cost</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">$0.284</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">Budget: $2.50 max</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Execution Time</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">04:18.2</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Target &lt; 06:00</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Throughput</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">64.2</span>
+<span class="font-label-sm text-label-sm text-primary mt-0.5">tokens / sec</span>
+</div>
+</div>
+<!-- Mini Sparkline inline SVG -->
+<div class="flex flex-col gap-1 mt-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Inference Speed Variance</span>
+<span class="font-semibold text-on-surface">Peak 82 t/s</span>
+</div>
+<div class="h-10 w-full bg-surface-container-low rounded-lg p-1">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0 18 Q 15 22, 25 12 T 50 14 T 75 4 T 100 8" fill="none" stroke="#4f46e5" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Tab Content 3: Sources Drawer Preview -->
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="content-sources">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">link</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Scraped Repositories</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold">38 Active Citations</span>
+</div>
+<!-- Source Item 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">public</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate max-w-[140px]">datadog.com/pricing</span>
+<span class="font-label-sm text-label-sm text-outline">Cached 3m ago</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container shrink-0">
+            98% Trust
+          </span>
+</div>
+<!-- Source Item 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate max-w-[140px]">dynatrace-10k-sec.gov</span>
+<span class="font-label-sm text-label-sm text-outline">Cached 2m ago</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container shrink-0">
+            99% Trust
+          </span>
+</div>
+<!-- Source Item 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">forum</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate max-w-[140px]">gartner.com/peer-insights</span>
+<span class="font-label-sm text-label-sm text-outline">Cached 1m ago</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded bg-surface-container text-on-surface-variant shrink-0">
+            91% Trust
+          </span>
+</div>
+<!-- HITL Verification Banner -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between mt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">how_to_reg</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">HITL Checkpoint</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Auto-approved</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  let isPaused = false;
+  function togglePause() {
+    isPaused = !isPaused;
+    const btnText = document.getElementById('btn-pause-text');
+    if (btnText) {
+      btnText.textContent = isPaused ? 'Resume' : 'Pause';
+    }
+  }
+
+  function copyShareLink() {
+    navigator.clipboard?.writeText(window.location.href);
+    alert('Live mission trace link copied to clipboard!');
+  }
+
+  function switchRightTab(tabName) {
+    const tabs = ['graph', 'metrics', 'sources'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      const content = document.getElementById('content-' + t);
+      if (t === tabName) {
+        btn?.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+        btn?.classList.remove('text-on-surface-variant');
+        content?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        btn?.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+        btn?.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  // Simulated live typing effect for Report Writer
+  (function simulateTyping() {
+    const target = document.getElementById('streaming-text');
+    if (!target) return;
+    const extraPhrases = [
+      " Furthermore, Dynatrace's Grail database enables instant querying of petabyte-scale unindexed spans.",
+      " Datadog retains speed advantage for ephemeral serverless invocations via Lambda extension proxies.",
+      " Enterprise TCO divergence expands at >250 host commitments."
+    ];
+    let phraseIdx = 0;
+    setInterval(() => {
+      if (isPaused) return;
+      if (phraseIdx < extraPhrases.length) {
+        target.textContent += extraPhrases[phraseIdx];
+        phraseIdx++;
+        const container = document.getElementById('trace-container');
+        if (container) container.scrollTop = container.scrollHeight;
+      }
+    }, 4500);
+  })();
+</script></main></div></body></html>
