@@ -8,6 +8,10 @@
 
 > **AgentPulse** is an industry-standard, client-ready Autonomous Multi-Agent platform engineered to plan, execute, cross-validate, and deliver high-impact market research, competitive analysis, and strategic briefs.
 
+<div align="center">
+  <img src="./assets/showcase.gif" alt="AgentPulse OS Autonomous AI Agent Launch Showcase" width="100%" style="border-radius: 12px; border: 1px solid #1e293b; margin: 16px 0;" />
+</div>
+
 Built with **FastAPI (Python async backend)** and **Next.js 16 / TypeScript / Tailwind CSS**, it features real-time agent execution streaming via Server-Sent Events (SSE), Human-in-the-Loop approval checkpoints, and verifiable fact-grounding audit reports.
 
 ---

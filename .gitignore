@@ -33,3 +33,15 @@ yarn-error.log*
 
 # Reference designs
 stitch_businessagent_os_platform/
+
+# Temporary Brag / Video Generation artifacts (keep rendered video/gif in assets/)
+brag-output/
+.hyperframes/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+.spyderproject
+.spyproject
+.ropeproject
