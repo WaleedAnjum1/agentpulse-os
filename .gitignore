@@ -30,3 +30,6 @@ yarn-debug.log*
 yarn-error.log*
 *.log
 
+
+# Reference designs
+stitch_businessagent_os_platform/
